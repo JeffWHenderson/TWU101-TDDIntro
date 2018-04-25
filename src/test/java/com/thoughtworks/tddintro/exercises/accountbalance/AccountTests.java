@@ -39,7 +39,11 @@ public class AccountTests {
 
     @Test
     public void shouldDecreaseMyBalanceWhenIWithdrawMoney(){
+        //action
+        account.withdraw(50);
 
+        //assert
+        assertThat(account.getBalance(), is(50));
     }
 
     @Test
