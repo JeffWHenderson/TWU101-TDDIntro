@@ -16,16 +16,15 @@ public class AccountTests {
     }
 
     @Test
-    @Ignore
     public void shouldIncreaseMyBalanceWhenIDepositMoney(){
-//        //arrange
-//        Account account = new Account();
-//
-//        //action
-//        account.deposit(50);
-//
-//        //assert
-//        assertThat(account.getBalance(), is(150));
+        //arrange
+        Account account = new Account(100);
+
+        //action
+        account.deposit(50);
+
+        //assert
+        assertThat(account.getBalance(), is(150));
     }
 
     @Test
