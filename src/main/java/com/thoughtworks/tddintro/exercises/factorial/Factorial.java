@@ -1,14 +1,17 @@
 package com.thoughtworks.tddintro.exercises.factorial;
 
 public class Factorial {
-    public Integer compute(int i) {
-        if(i < 0)
-            return -1; // need to throw an exception here.  IllegalArgumentException
-        else if(i == 0)
+    public Integer compute(int n) {
+        if(n < 0)
+            throw new IllegalArgumentException("Please enter a positive integer.");
+        else if(n == 0){
             return 1;
-        else if(i <= 2)
-            return i;
-        else
-            return 6; // works only for the test cases given.. need to add recursive
+        }
+        else{
+            for(int i = n-1; i > 0; i--){
+                n *= i;
+            }
+            return n;
+        }
     }
 }
