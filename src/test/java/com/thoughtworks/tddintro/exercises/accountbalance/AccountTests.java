@@ -47,8 +47,9 @@ public class AccountTests {
     }
 
     @Test
-    @Ignore  // Remove each @Ignore and implement test
     public void shouldNotDecreaseMyBalanceWhenIWithdrawMoneyAndDoNotHaveEnoughToCoverTheWithdrawal(){
+        account.withdraw(1000);
 
+        assertThat(account.getBalance(), is(100));
     }
 }
