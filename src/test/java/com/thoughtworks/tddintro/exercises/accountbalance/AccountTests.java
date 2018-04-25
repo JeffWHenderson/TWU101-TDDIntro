@@ -28,21 +28,15 @@ public class AccountTests {
 
     @Test
     public void shouldIncreaseMyBalanceWhenIDepositMoney(){
-        //arrange done by before Action
-
-        //action
         account.deposit(50);
 
-        //assert
         assertThat(account.getBalance(), is(150));
     }
 
     @Test
     public void shouldDecreaseMyBalanceWhenIWithdrawMoney(){
-        //action
         account.withdraw(50);
 
-        //assert
         assertThat(account.getBalance(), is(50));
     }
 
