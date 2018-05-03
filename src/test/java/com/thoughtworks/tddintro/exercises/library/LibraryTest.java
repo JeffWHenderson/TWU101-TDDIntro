@@ -43,9 +43,6 @@ public class LibraryTest {
 
     @Test
     public void shouldPrintNothingWhenThereAreNoBooks() {
-//        String title = "Book Title";
-//        books.add(title);
-
         library.listBooks();
 
         verify(printStream).println("");
@@ -59,7 +56,6 @@ public class LibraryTest {
         books.add(title2);
 
         library.listBooks();
-
         verify(printStream).println(title + "\n" + title2 + "\n");
     }
 

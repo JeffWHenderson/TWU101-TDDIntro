@@ -26,7 +26,6 @@ public class FactorialTests {
 
     @Test
     public void shouldReturnTwoWhenNumberIsTwo(){
-
         assertThat(factorial.compute(2), is(2));
     }
 
@@ -37,13 +36,11 @@ public class FactorialTests {
 
     @Test
     public void shouldReturnSixWhenNumberIsThree(){
-
         assertThat(factorial.compute(3), is(6));
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowIllegalArgumentExceptionWhenNumberIsNegative(){
-
         factorial.compute(-1);
     }
 }
